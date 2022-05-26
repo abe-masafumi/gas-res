@@ -16,8 +16,8 @@ return {
 
 };
 
-const phone = () => {
-  // console.log(props);
+const phone = (props) => {
+  console.log(props);
   return (
     <div>
       test
