@@ -6,16 +6,16 @@ export async function getServerSideProps(context) {
       'Content-Type': 'application/json'
     },
   })
-    .then(res => res.json())
-    .then(json => {
-      console.log(json);
-      return {
-        props: {
-          props:json,
-        },
-      }
-    // Do something...
-    })
+    .then(res => console.log(res))
+    // .then(json => {
+    //   console.log(json);
+    //   return {
+    //     props: {
+    //       props:json,
+    //     },
+    //   }
+    // // Do something...
+    // })
     .catch(err => console.log(err));
     return {
       props: {
