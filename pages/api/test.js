@@ -3,10 +3,9 @@
 
 /** 想定されるリクエストパラメータ */
 
-export default async (body, res) => {
-  console.log("ssssss");
-  console.log(req);
-  console.log(body);
+export default async (req, res) => {
+  console.log(res)
+  console.log(req)
   try {
     res.status(200).json({ result: `「${body?.message}」を受け取りました！` });
   console.log("ssssss")
