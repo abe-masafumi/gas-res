@@ -5,8 +5,8 @@ const WEB_APP_URL ="https://script.googleusercontent.com/macros/echo?user_conten
 
 const response = await fetch(WEB_APP_URL);
 
-// const data = await response.json();
-const data = JSON.parse(JSON.stringify(response));
+const data = await response.json();
+// const data = JSON.parse(JSON.stringify(response));
 console.log(data);
 return {
       props: {
