@@ -2,7 +2,7 @@
 
 export default async (req, res) => {
   try {
-    res.status(200).json({ result: `${req.text()}「${JSON.parse(JSON.stringify(res))}」を受け取りました！` });
+    res.status(200).json({ result: `${req.text()}「${JSON.stringify(res)}」を受け取りました！` });
   console.log("ssssss")
     
   } catch (e) {
