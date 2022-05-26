@@ -8,7 +8,7 @@
 /** リクエストに対して返却するデータ */
 
 export default async (req, res) => {
-  console.log(req);
+  console.log("リクエスト",req);
   try {
     res.status(200).json({ result: `Next.jsから送信されました!` });
   } catch (e) {
