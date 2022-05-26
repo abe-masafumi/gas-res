@@ -17,7 +17,7 @@ return {
 };
 
 const phone = (props) => {
-  console.log(props);
+  console.log(props.message);
   return (
     <div>
       test
