@@ -14,7 +14,7 @@
 
 // };
 
-const phone = ({ props }) => {
+const phone = () => {
   // console.log(props);
   return (
     <div>
