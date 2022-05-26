@@ -15,7 +15,7 @@
 // };
 
 const product = ({ props }) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       test
