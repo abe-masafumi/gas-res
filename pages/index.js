@@ -3,21 +3,21 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-export async function getServerSideProps() {
-  const WEB_APP_URL ="https://script.google.com/macros/s/AKfycbxuIL-slPOq3eF5LVQ8Ss0QJAZ33ccH8FZr1Z8a6EfIP5JiIs3deA-exPs7437g-j5b/exec";
-  const response = await fetch(WEB_APP_URL);
+// export async function getServerSideProps() {
+//   const WEB_APP_URL ="https://script.google.com/macros/s/AKfycbxuIL-slPOq3eF5LVQ8Ss0QJAZ33ccH8FZr1Z8a6EfIP5JiIs3deA-exPs7437g-j5b/exec";
+//   const response = await fetch(WEB_APP_URL);
 
-  const data = JSON.parse(JSON.stringify(response));
-  console.log(data);
+//   const data = JSON.parse(JSON.stringify(response));
+//   console.log(data);
 
-  // const data = await response.json();
-  return {
-    props: {
-      data,
-    },
-  }
+//   // const data = await response.json();
+//   return {
+//     props: {
+//       data,
+//     },
+//   }
 
-}
+// }
 
 export default function Home({props}) {
   console.log(props);
