@@ -14,7 +14,7 @@
 
 // };
 
-const product = ({ props }) => {
+const phone = ({ props }) => {
   // console.log(props);
   return (
     <div>
@@ -22,4 +22,4 @@ const product = ({ props }) => {
     </div>
   );
 }
-export default product;
+export default phone;
