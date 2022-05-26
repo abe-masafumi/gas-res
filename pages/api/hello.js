@@ -11,7 +11,8 @@ export default async (req, res) => {
   console.log("リクエスト",req);
   try {
     res.status(200).json({ result: `Next.jsから送信されました!` });
-    console.log("aaaaaaa")
+    
+
   } catch (e) {
     res.status(500).json({ result: `エラー！` });
   }
