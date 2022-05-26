@@ -4,7 +4,8 @@ const WEB_APP_URL ="https://script.google.com/macros/s/AKfycbxuIL-slPOq3eF5LVQ8S
 
 const response = await fetch(WEB_APP_URL);
 
-const data = await response.json();
+// const data = await response.json();
+const data = JSON.parse(JSON.stringify(response));
 console.log(data);
 return {
       props: {
