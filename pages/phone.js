@@ -1,23 +1,33 @@
 export async function getServerSideProps(context) {
   console.log(context);
-  /** GASのWEBアプリケーションURL */
-const WEB_APP_URL ="https://script.googleusercontent.com/macros/echo?user_content_key=Bg7hyKFV69uksFmLzuDb1yUB8dXffbEpTMLt-2az8SE_NJhrIHMURQLL6nsnU9SvbgoJMbOXkUGq3gl_Ze6M-xAgcTH9oL_hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHygPuFLngzF7q2ueWSz0xWqdqSpR82WqICKot89PA2d89Dwc6HU6qcFonY-Q_58fcRGeKnPk8bMqThbrF0vKhM1Gs9BPt8QXg&lib=MHiYzXSUXvtslAeKU6a5bYz4e5fkJzZ6i";
-
-const response = await fetch(WEB_APP_URL);
-
-// const data = await response.json();
-const data = JSON.parse(JSON.stringify(response));
-console.log(data);
-return {
+  fetch('https://www.jma.go.jp/bosai/himawari/data/satimg/targetTimes_jp.json', {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+    .then(res => res.json())
+    .then(json => {
+      console.log(json);
+      return {
+        props: {
+          props:json,
+        },
+      }
+    // Do something...
+    })
+    .catch(err => console.log(err));
+    return {
       props: {
-        props: data,
+        props:"aaa",
       },
     }
+
 
 };
 
 const phone = (props) => {
-  console.log(props.message);
+  console.log(props);
   return (
     <div>
       test
