@@ -20,7 +20,7 @@ import Link from 'next/link'
 // }
 
 export default function Home({props}) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className={styles.container}>
       
