@@ -3,7 +3,7 @@
 export default async (req, res) => {
   try {
     const test = JSON.parse(req.body)
-    res.status(200).json({ result: `${test?.values}` });
+    res.status(200).json({ result: `${test}` });
     // 
   } catch (e) {
     res.status(500).json({ result: `エラー！` });
