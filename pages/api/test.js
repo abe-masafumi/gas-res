@@ -3,7 +3,7 @@
 export default async (req, res) => {
   try {
     
-    res.status(200).json( req.json() );
+    res.status(200).json({ result: `を受け取りまし` });
     console.log("ssssss")
     
   } catch (e) {
